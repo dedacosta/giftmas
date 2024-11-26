@@ -1,12 +1,13 @@
 
-PROXY := http://localhost:8080
+#PROXY := http://localhost:8080
+PROXY := https://giftmas.onrender.com
 
 BACKUP := mkdir -p backups; cp import.json import.json.bk 2>/dev/null || :; cp import.json backups/import-$$(date +%Y%m%d%H%M%S).json 2>/dev/null || :
 
 main:
 	@#
 
-.PHONY : persons person import export show send clear delete
+.PHONY : persons person import export show send clear delete clean
 
 persons:
 	@curl -s -X GET $(PROXY)/control/persons | python -m json.tool
@@ -40,3 +41,6 @@ delete:
 	@$(BACKUP)
 	@curl -s -X DELETE $(PROXY)/control/person/$(id)
 	@curl -s -X GET  $(PROXY)/control/persons | python -m json.tool > import.json
+
+clean:
+	@rm -rf backups *.bk

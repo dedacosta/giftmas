@@ -94,6 +94,10 @@ public class ControlCenterService {
     public void fromFile() {
         persons.clear();
         Path file = Paths.get(FILENAME);
+        if(Files.notExists(file)) {
+            LOG.warn("File '{}' does not exits", FILENAME);
+            return;
+        }
         try {
             for (String line : Files.readAllLines(file, StandardCharsets.UTF_8)) {
                 String[] split = line.split("\\s*,\\s*");
