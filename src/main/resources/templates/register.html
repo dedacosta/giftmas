@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="shortcut icon" href="/favicon.ico?" />
+</head>
+<body>
+<div class="central-box">
+    <div class="large-text">Amigo Secreto</div>
+    <h1>REGISTRO</h1>
+    <form action="/register" method="post">
+        <label for="name">Nombre:</label>
+        <input type="name" name="name" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br><br>
+        <input class="button" type="submit" value="Enviar">
+    </form>
+</div>
+</body>
+</html>

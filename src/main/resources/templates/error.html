@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="shortcut icon" href="/favicon.ico?"/>
+</head>
+<body>
+<div class="central-box">
+    <h1>An Error Occurred</h1>
+    <h2 style="color:#922b21" th:text="${message}">Default Message</h2>
+    <a th:href="@{/}" class="button">Back</a>
+</div>
+</body>
+</html>

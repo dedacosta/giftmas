@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="shortcut icon" href="/favicon.ico?" />
+</head>
+<body>
+<div class="central-box">
+    <h1 th:text="${message}">Default Message</h1>
+    <a th:href="@{/email}">Send Another Email</a>
+</div>
+</body>
+</html>

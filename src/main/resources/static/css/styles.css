@@ -1,0 +1,63 @@
+/* Center the box on the page */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+      background-image: url('../pictures/navidad.jpg'); /* Replace with your image path */
+        background-repeat: repeat; /* Makes the image tile across the entire page */
+        background-size: auto; /* Adjust image size (auto keeps original size) */
+}
+
+.large-text {
+    font-size: 4em; /* Adjust as needed */
+    font-weight: bold; /* Optional, for emphasis */
+    text-align: center; /* Optional, to center the text */
+}
+
+/* Style the central box */
+.central-box {
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Prevent it from becoming too wide */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Add some hover effects if needed */
+.central-box:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01); /* Slight zoom effect */
+}
+
+/* Additional text styles */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .central-box {
+        width: 90%;
+        padding: 15px;
+    }
+}
